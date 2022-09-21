@@ -1,6 +1,5 @@
-# Vet-Clinic
-This is a simple relational database that holds data about animals.It has 5 columns: name, date_of_birth, escape_attempts, neutered, and weight_kg.
-
+## Vet-Clinic
+This is a simple relational database that holds data about animals. It consists of three tables:- animals table, species table, and owners_table.
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
