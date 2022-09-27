@@ -22,3 +22,26 @@ CREATE TABLE medical_histories (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE invoice_items (
+    id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+    unit_price  DECIMAL NOT NULL,
+    quantity INT NOT NULL,
+    total_price DECIMAL NOT NULL,
+    treatment_id INT REFERENCES treatments(id),
+    invoice_id INT REFERENCES invoices(id),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE treatments (
+    id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+    type VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE medical_histories_treatment (
+    id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+    medical_history_id INT REFERENCES medical_histories(id),
+    treatment_id INT REFERENCES treatments(id),
+    PRIMARY KEY (id)
+);
