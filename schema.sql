@@ -56,3 +56,8 @@ CREATE TABLE visits (
     vet_id INTEGER REFERENCES vets (id),
     date_of_visit DATE NOT NULL 
 );
+
+/* Create index */
+CREATE INDEX vet_id_index ON visits(vet_id ASC);
+CREATE INDEX animals_id_index ON visits(animals_id ASC);
+CREATE INDEX email_index ON owners(email);

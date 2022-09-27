@@ -61,3 +61,8 @@ SELECT vets.name AS visitor, A.name, visits.visit_date FROM animals A JOIN visit
 SELECT A.name AS animal_name, A.date_of_birth, A.escape_attempts, A.neutered, A.weight_kg, species.name, vets.name AS visitor, vets.age, vets.date_of_graduation, visits.visit_date FROM vets JOIN visits ON visits.vet_id = vets.id JOIN animals A ON A.id = visits.animal_id JOIN species ON A.species_id = species.id;
 SELECT animals.name AS animal, species.name AS species,vets.name AS vet, vet_sp.name AS specialized FROM vets JOIN visits ON vets.id = visits.vet_id JOIN animals ON visits.animal_id = animals.id JOIN species ON species.id = animals.species_id JOIN specializations ON specializations.vet_id = vets.id JOIN species vet_sp ON vet_sp.id = specializations.species_id WHERE species.id != vet_sp.id;
 SELECT species.name AS species FROM vets JOIN visits ON vets.id = visits.vet_id JOIN animals ON visits.animal_id = animals.id JOIN species ON species.id = animals.species_id WHERE vets.name = 'Maisy Smith' GROUP BY species LIMIT 1;
+
+/* Add Queries*/
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
