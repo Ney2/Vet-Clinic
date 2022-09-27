@@ -51,10 +51,8 @@ CREATE TABLE specializations (
 
 /* Create join table named visits */
 CREATE TABLE visits (
-    animal_id INT,
-    vet_id INT,
-    visit_date DATE,
-    PRIMARY KEY(animal_id, vet_id, visit_date),
-    FOREIGN KEY(animal_id) REFERENCES animals(id),
-    FOREIGN KEY(vet_id) REFERENCES vets(id)
+    id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+    animals_id INTEGER REFERENCES animals (id), 
+    vet_id INTEGER REFERENCES vets (id),
+    date_of_visit DATE NOT NULL 
 );
