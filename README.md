@@ -8,7 +8,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Use [data.sql](./data.sql) to populate tables with sample data.
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
-###### Entity Relationship Diagram
+#### Entity Relationship Diagram
 
 ![WhatsApp Image 2022-09-27 at 4 42 41 PM](https://user-images.githubusercontent.com/95876178/192546866-1e3a4831-6e16-4a4b-a3c3-88f90cdf0d12.jpeg)
 
